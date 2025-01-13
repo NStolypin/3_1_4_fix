@@ -23,21 +23,18 @@ import org.springframework.util.StringUtils;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.RequiredArgsConstructor;
 import ru.esplit.first_security_app.services.PersonDetailsService;
 
 @Configuration
 @EnableGlobalAuthentication
 @EnableWebSecurity
 @EnableMethodSecurity(securedEnabled = true, jsr250Enabled = true)
+@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final PersonDetailsService personDetailsService;
     private final SuccessUserHandler successUserHandler;
-
-    public SecurityConfig(PersonDetailsService personDetailsService, SuccessUserHandler successUserHandler) {
-        this.personDetailsService = personDetailsService;
-        this.successUserHandler = successUserHandler;
-    }
 
     @Bean
     public AuthenticationProvider authenticationProvider(AuthenticationManagerBuilder auth) {

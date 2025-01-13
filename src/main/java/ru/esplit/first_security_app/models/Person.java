@@ -54,10 +54,6 @@ public class Person {
         this.yearOfBirth = yearOfBirth;
     }
 
-    // public Collection<? extends Role> getRoles() {
-    //     return this.roles;
-    // }
-
     @Override
     public int hashCode() {
         final int prime = 31;
