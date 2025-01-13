@@ -30,7 +30,6 @@
                 :
                 notCreatedNewPerson(response)
         });
-
     });
 }());
 
